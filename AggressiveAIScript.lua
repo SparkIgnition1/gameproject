@@ -1,5 +1,22 @@
 -- Get the parts
-local ai = game.Workspace.AI -- Change this to the path of your AI
+local ai = game.Workspace.AI -- Change this to the path of the AI
+
+-- Define the initial speed
+local speed = 16 -- Change this to the initial speed of the AI
+
+-- Define the aggressive behavior
+local function triggerAggressiveAI()
+    -- Increase the speed
+    speed = speed + 2 -- Change 2 to the amount you want to increase the speed by
+
+    -- Set the new speed
+    ai.Humanoid.WalkSpeed = speed
+end
+
+-- Make the triggerAggressiveAI function available to other scripts
+_G.triggerAggressiveAI = triggerAggressiveAI
+
+-- Get the parts
 local player = game.Players.LocalPlayer.Character -- Change this to the path of your player
 
 -- Get the services

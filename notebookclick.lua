@@ -1,6 +1,7 @@
 -- Get the parts
 local notebook = game.Workspace.Notebook -- Change this to the path of your notebook
 local clickDetector = notebook:FindFirstChild("ClickDetector")
+local ui = notebook:FindFirstChild("UI") --Make the name of the screengui "UI"
 
 -- Check if the ClickDetector is present
 if not clickDetector then
